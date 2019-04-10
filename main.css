@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+html, body, h1 {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 100ms all ease;
+    -moz-transition: 100ms all ease;
+    -webkit-transition: 100ms all ease;
+    -o-transition: 100ms all ease;
+    -ms-transition: 100ms all ease;
+
+    animation: backgroundanimate 60s infinite;
+}
+
+@keyframes backgroundanimate {
+    0% { background: #fb939f }
+    25% { background: #fee96c }
+    50% { background: #6fffe9 }
+    75% { background: #eaeae8 }
+    100% { background: #fb939f }
+}
+
+.slide {
+    width: 90vw;
+    height: 90vh;
+
+    display: flex;
+    flex-flow: column;
+}
+
+* {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slide .center {
+    flex-grow: 1;
+
+    display: flex;
+}
+
+.center .left {
+    flex-grow: 1;
+    margin-left: 16px;
+    padding-right: 16px;
+    max-width: 55%;
+}
+
+.center .line {
+    border-right: 2px solid black;
+}
+
+.center .right {
+    flex-grow: 1;
+    padding-left: 16px;
+    margin-right: 16px;
+}
+
+.slide h1 {
+    text-align: center;
+    padding-bottom: 5vh;
+    font-size: 3vw;
+}
